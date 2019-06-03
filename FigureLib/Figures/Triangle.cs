@@ -73,17 +73,10 @@ namespace FigureLib.Figures
                 }
 
                 var sides = new List<double>() { A, B, C };
-                var g = sides.Max(); //гипотенуза
-                for (int i = 0; i < sides.Count(); i++)
-                {
-                    if (sides[i] == g)
-                    {
-                        sides.RemoveAt(i);
-                        break;
-                    }
-                }
+                var katets = sides.OrderBy(s => s).Take(2).ToArray();
+                var g = sides.OrderBy(s => s).Skip(2).Take(1).Single();
 
-                var gCalc = Math.Sqrt(Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2));
+                var gCalc = Math.Sqrt(Math.Pow(katets[0], 2) + Math.Pow(katets[1], 2));
 
                 return Math.Abs(g - gCalc) < error;
             }
