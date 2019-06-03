@@ -1,6 +1,0 @@
-C:\Users\VoimiX\Documents\GitHub\TestMindBox\FigureLib\bin\Debug\FigureLib.dll
-C:\Users\VoimiX\Documents\GitHub\TestMindBox\FigureLib\bin\Debug\FigureLib.pdb
-C:\Users\VoimiX\Documents\GitHub\TestMindBox\FigureLib\obj\Debug\FigureLib.csprojAssemblyReference.cache
-C:\Users\VoimiX\Documents\GitHub\TestMindBox\FigureLib\obj\Debug\FigureLib.csproj.CoreCompileInputs.cache
-C:\Users\VoimiX\Documents\GitHub\TestMindBox\FigureLib\obj\Debug\FigureLib.dll
-C:\Users\VoimiX\Documents\GitHub\TestMindBox\FigureLib\obj\Debug\FigureLib.pdb
