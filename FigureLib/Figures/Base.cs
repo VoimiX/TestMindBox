@@ -1,6 +1,6 @@
 ﻿namespace FigureLib.Figures
 {
-    public class Base
+    public abstract class Base
     {
         public virtual double Square { get; }
     }
