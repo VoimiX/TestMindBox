@@ -6,6 +6,7 @@ namespace FigureLib.Figures
     {
         internal Circle(double radius)
         {
+            if (radius < 0) throw new ArgumentOutOfRangeException("radius", "Радиус должен быть не меньше нуля");
             Radius = radius;
         }
 

@@ -14,7 +14,7 @@ namespace UnitTest
         public void Test_CircleSquare_IsCorrect()
         {
             var rad = 5;
-            var c = FigureCalculator.CreateCircle(rad);
+            var c = FigureFabric.CreateCircle(rad);
             Assert.IsTrue(Math.Abs(c.Square - 78.539) < error);
         }
 
@@ -22,15 +22,15 @@ namespace UnitTest
         [TestMethod]
         public void Test_TriangeSquare_IsCorrect()
         {         
-            var c = FigureCalculator.CreateTriange(2, 3, 3.605);
+            var c = FigureFabric.CreateTriange(2, 3, 3.605);
             Assert.IsTrue(Math.Abs(c.Square - 3) < error);
         }
 
         [TestMethod]
         public void Test_Triange_IsRectangular()
         {           
-            var t = FigureCalculator.CreateTriange(2, 3, 3.605);
-            Assert.IsTrue(((Triange)t).IsRectangular);
+            var t = FigureFabric.CreateTriange(2, 3, 3.605);
+            Assert.IsTrue(((Triangle)t).IsRectangular);
         }
     }
 }

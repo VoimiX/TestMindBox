@@ -4,10 +4,18 @@ using System.Linq;
 
 namespace FigureLib.Figures
 {
-    public class Triange : Base
+    public class Triangle : Base
     {
-        internal Triange(double a, double b, double c)
+        internal Triangle(double a, double b, double c)
         {
+            if (a < 0) throw new ArgumentOutOfRangeException("a", "Сторона треугольника должна быть не меньше нуля");
+            if (b < 0) throw new ArgumentOutOfRangeException("b", "Сторона треугольника должна быть не меньше нуля");
+            if (c < 0) throw new ArgumentOutOfRangeException("c", "Сторона треугольника должна быть не меньше нуля");
+
+            if (a + b < c || a + c < b || b + c < a)
+                throw new ArgumentOutOfRangeException(
+                    "Неправильно заданы стороны треугольника. Такой треугольник не может существовать");
+
             A = a;
             B = b;
             C = c;

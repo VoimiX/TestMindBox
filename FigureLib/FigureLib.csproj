@@ -40,10 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FigureCalculator.cs" />
+    <Compile Include="FigureFabric.cs" />
     <Compile Include="Figures\Base.cs" />
     <Compile Include="Figures\Circle.cs" />
-    <Compile Include="Figures\Triange.cs" />
+    <Compile Include="Figures\Triangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,7 +2,7 @@
 
 namespace FigureLib
 {
-    public static class FigureCalculator
+    public static class FigureFabric
     {
         public static Base CreateCircle(double radius)
         {
@@ -11,7 +11,7 @@ namespace FigureLib
 
         public static Base CreateTriange(double a, double b, double c)
         {
-            return new Triange(a, b, c);
+            return new Triangle(a, b, c);
         }
     }
 }
