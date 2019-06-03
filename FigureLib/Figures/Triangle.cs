@@ -2,30 +2,64 @@
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace FigureLib.Figures
 {
     public class Triangle : Base
     {
+        private double _a;
+        private double _b;
+        private double _c;
+
         internal Triangle(double a, double b, double c)
         {
-            if (a < 0) throw new ArgumentOutOfRangeException("a", "Сторона треугольника должна быть не меньше нуля");
-            if (b < 0) throw new ArgumentOutOfRangeException("b", "Сторона треугольника должна быть не меньше нуля");
-            if (c < 0) throw new ArgumentOutOfRangeException("c", "Сторона треугольника должна быть не меньше нуля");
-
-            if (a + b < c || a + c < b || b + c < a)
-                throw new ArgumentOutOfRangeException(
-                    "Неправильно заданы стороны треугольника. Такой треугольник не может существовать");
-
             A = a;
             B = b;
             C = c;
         }
 
-        public double Radius { get; private set; }
+        public double A
+        {
+            get { return _a; }
+            set
+            {
+                if (value < 0) throw new ArgumentOutOfRangeException("Сторона треугольника должна быть не меньше нуля");
+                AllSidesCheck();
+                _a = value;
+            }
+        }
 
-        public double A {get; set;}
-        public double B { get; set; }
-        public double C { get; set; }
+        public double B
+        {
+            get { return _b; }
+            set
+            {
+                if (value < 0) throw new ArgumentOutOfRangeException("Сторона треугольника должна быть не меньше нуля");
+                AllSidesCheck();
+                _b = value;
+            }
+        }
+
+        public double C
+        {
+            get { return _c; }
+            set
+            {
+                if (value < 0) throw new ArgumentOutOfRangeException("Сторона треугольника должна быть не меньше нуля");
+                AllSidesCheck();
+                _c = value;
+            }
+        }
+
+        private void AllSidesCheck()
+        {
+            if (A > 0 && B > 0 && C > 0)
+            {
+                if (A + B < C || A + C < B || B + C < A)
+                    throw new ArgumentOutOfRangeException(
+                        "Неправильно заданы стороны треугольника. Такой треугольник не может существовать");
+            }
+        }
 
         public bool IsRectangular
         {

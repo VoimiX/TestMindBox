@@ -4,13 +4,22 @@ namespace FigureLib.Figures
 {
     public class Circle : Base
     {
+        private double _radius;
+
         internal Circle(double radius)
         {
-            if (radius < 0) throw new ArgumentOutOfRangeException("radius", "Радиус должен быть не меньше нуля");
             Radius = radius;
         }
 
-        public double Radius { get; set; }
+        public double Radius
+        {
+            get { return _radius; }
+            set
+            {
+                if (value < 0) throw new ArgumentOutOfRangeException("radius", "Радиус должен быть не меньше нуля");
+                _radius = value;
+            }
+        }
 
         public override double Square
         {
